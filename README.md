@@ -31,6 +31,21 @@ experiments/ runnable experiment scripts + results
 ## Status
 
 - [x] Repo initialized
-- [ ] Direction survey & critical review (`docs/`)
-- [ ] Baselines
-- [ ] Prototype v0
+- [x] Direction survey & critical review (`docs/01–03`)
+- [x] Environment: JAX (CPU) + Flax + Optax on a 1-core/3 GB box (`requirements.txt`)
+- [x] Data pipeline: MNIST / Fashion-MNIST / CIFAR-10 via proxy-reachable mirrors,
+      checksummed npz caches (`scripts/fetch_data.sh`, `scripts/data.md5`)
+- [x] Baselines implemented: FP32, BinaryConnect, BNN (STE), Bop (latent-free)
+- [x] Evaluation harness: multi-seed runner + 95% t-CI aggregation (`docs/04`)
+- [ ] Baseline numbers on all benchmarks (`results/summary.md`, filling in)
+- [ ] Prototype v0 (Phase 1 bake-off)
+
+## Reproduce
+
+```
+pip install -r requirements.txt
+./scripts/fetch_data.sh                                  # rebuild data caches
+python3 -m experiments.run --exp mnist_mlp_bnn --smoke   # fast correctness check
+./scripts/queue_phase1.sh                                # full baseline queue (resumable)
+python3 -m experiments.aggregate                         # results/summary.md
+```

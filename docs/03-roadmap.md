@@ -27,3 +27,6 @@
 |---|---|---|
 | 2026-07-26 | Repo created; problem framed as discrete search + model-class redesign, not STE repair | See docs/01, docs/02 |
 | 2026-07-26 | Three composite candidates selected for bake-off | Coverage of the three axes (local rule / credit assignment / architecture) with different risk profiles |
+| 2026-07-26 | Stack = JAX(CPU)+Flax+Optax+NumPy | 1-core/3GB box; PyTorch pulls multi-GB CUDA deps & its CPU index is proxy-blocked; jaxlib PyPI wheel is CPU-native and small; XLA best single-core FP throughput; integer-native methods will be NumPy bit-ops |
+| 2026-07-26 | CIFAR-10 from JPEG GitHub mirror, checksummed | Canonical hosts + LFS media blocked by egress proxy; identical cache for all methods keeps internal comparisons valid (caveat in docs/04) |
+| 2026-07-26 | Baselines = fp32 / BinaryConnect / BNN / Bop; compute-matched budgets; 5 seeds (3 for CIFAR) with 95% t-CI | Covers FP anchor + both STE regimes + the strongest latent-free prior method; paper-scale infeasible on 1 core, so shared budgets + quoted literature context (docs/04) |
