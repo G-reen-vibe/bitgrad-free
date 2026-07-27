@@ -1,0 +1,30 @@
+{
+ "seed": 0,
+ "final_acc": 0.112,
+ "best_acc": 0.112,
+ "history": [
+  0.112
+ ],
+ "wall_seconds": 153.67823600769043,
+ "steps": 120,
+ "steps_per_sec": 0.780852273668699,
+ "n_params_binary_layers": 0,
+ "n_params_other": 66420,
+ "train_state_bits_per_weight": 96,
+ "inference_weight_bits": 32,
+ "model_size_bits": 2125440,
+ "config": {
+  "batch_size": 100,
+  "lr": 0.001,
+  "bop_gamma": 0.001,
+  "bop_tau": 1e-06,
+  "dataset": "cifar10",
+  "arch": "cnn_s",
+  "method": "fp32",
+  "epochs": 1,
+  "augment": true,
+  "max_steps": 120,
+  "eval_limit": 2000
+ },
+ "experiment": "cifar10_cnn_s_fp32"
+}

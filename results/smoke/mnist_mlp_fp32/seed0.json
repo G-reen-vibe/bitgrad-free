@@ -1,0 +1,29 @@
+{
+ "seed": 0,
+ "final_acc": 0.6265,
+ "best_acc": 0.6265,
+ "history": [
+  0.6265
+ ],
+ "wall_seconds": 3.234314441680908,
+ "steps": 120,
+ "steps_per_sec": 37.102143951604994,
+ "n_params_binary_layers": 0,
+ "n_params_other": 269844,
+ "train_state_bits_per_weight": 96,
+ "inference_weight_bits": 32,
+ "model_size_bits": 8635008,
+ "config": {
+  "batch_size": 100,
+  "lr": 0.001,
+  "bop_gamma": 0.001,
+  "bop_tau": 1e-06,
+  "dataset": "mnist",
+  "arch": "mlp",
+  "method": "fp32",
+  "epochs": 1,
+  "max_steps": 120,
+  "eval_limit": 2000
+ },
+ "experiment": "mnist_mlp_fp32"
+}
