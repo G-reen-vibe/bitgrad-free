@@ -1,0 +1,6 @@
+jax==0.4.38
+jaxlib==0.4.38
+flax==0.10.2
+optax==0.2.4
+numpy>=2.0
+pillow
